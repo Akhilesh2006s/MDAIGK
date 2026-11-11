@@ -1,0 +1,13 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@mango/shared": ["../../packages/shared/src/index.ts"]
+    },
+    "types": ["jest", "node"]
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist", "android", "ios", "metro.config.js", "jest.config.js", "babel.config.js"]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "mango-dude-aigk",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mango Dude AIGK - experiential learning platform (MERN + React Native)",
+  "workspaces": [
+    "packages/shared",
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "postinstall": "npm run build -w @mango/shared",
+    "build": "npm run build -w @mango/shared && npm run build -w @mango/api && npm run build -w @mango/web",
+    "dev:api": "npm run dev -w @mango/api",
+    "dev:web": "npm run dev -w @mango/web",
+    "seed": "npm run seed -w @mango/api",
+    "test": "npm test -w @mango/api && npm test -w @mango/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev:api:memory": "npm run dev:memory -w @mango/api"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

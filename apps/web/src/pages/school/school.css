@@ -1,0 +1,8 @@
+.card--locked {
+  background: #f6f6f2;
+  border-style: dashed;
+  box-shadow: none;
+}
+.card--locked .card__title {
+  color: var(--muted);
+}
